@@ -9,9 +9,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 999d70af3ac742e44a116dcfe5c3196b, type: 3}
-  m_Name: CameraSettings_LocalPlayer
+  m_Script: {fileID: 11500000, guid: b7406043a26528b499c5491d9aa82221, type: 3}
+  m_Name: PlayerInventoryBodyItemData_Default
   m_EditorClassIdentifier: 
-  _rotationLerpSpeed: 10
-  _positionOffset: {x: 2, y: 4, z: -6}
-  _positionLerp: 10
+  _itemId: default
+  _inventoryItemDataType: 1
+  _prefab: {fileID: 1114016148536786555, guid: 30bff3a04b508244d962a08f53d285e1, type: 3}

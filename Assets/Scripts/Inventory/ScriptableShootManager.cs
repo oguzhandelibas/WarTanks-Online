@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+
 namespace TopDownShooter.Inventory
 {
     [CreateAssetMenu(menuName = "Topdown Shooter/Inventory/ScriptableShootManager")]

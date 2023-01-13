@@ -10,6 +10,7 @@ namespace TopDownShooter.Inventory
 
         public void Shoot()
         {
+            //add also effect and such
             ScriptableShootManager.Instance.Shoot(_cannonShootPoint.position, _cannonShootPoint.forward);
         }
     }

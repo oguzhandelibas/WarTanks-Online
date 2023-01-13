@@ -35,17 +35,16 @@ namespace TopDownShooter.PlayerInput
             {
                 if (_keyBaseHorizontalActive)
                 {
-                    KeyBaseHorizontal(ref Horizontal, PositiveHorizontalKeyCode, NegativeHorizontalKeyCode);
+                    KeyBaseAxisControl(ref Horizontal, PositiveHorizontalKeyCode, NegativeHorizontalKeyCode);
                 }
                 if (_keyBaseVerticalActive)
                 {
-                    KeyBaseHorizontal(ref Horizontal, PositiveVerticalKeyCode, NegativeVerticalKeyCode);
+                    KeyBaseAxisControl(ref Vertical, PositiveVerticalKeyCode, NegativeVerticalKeyCode);
                 }
-
             }
         }
 
-        private void KeyBaseHorizontal(ref float value, KeyCode positive, KeyCode negative)
+        private void KeyBaseAxisControl(ref float value, KeyCode positive, KeyCode negative)
         {
             bool positiveActive = Input.GetKey(positive);
             bool negativeActive = Input.GetKey(negative);

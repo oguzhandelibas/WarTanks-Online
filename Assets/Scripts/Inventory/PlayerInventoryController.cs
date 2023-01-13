@@ -7,8 +7,8 @@ namespace TopDownShooter.Inventory {
     {
         [SerializeField] private AbstractBasePlayerInventoryItemData[] _inventoryItemDataArray;
         private List<AbstractBasePlayerInventoryItemData> _instantiatedItemDataList;
-
         public Transform Parent;
+
         private void Start()
         {
             InitializeInventory(_inventoryItemDataArray);

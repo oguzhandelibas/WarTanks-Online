@@ -16,7 +16,7 @@ namespace TopDownShooter.Inventory
         protected T InstantiateAndInitializePrefab(Transform parent)
         {
             _instantiated = Instantiate(_prefab, parent);
-            return Instantiate(_prefab, parent);
+            return _instantiated;
         }
     }
 }

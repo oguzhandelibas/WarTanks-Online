@@ -123,6 +123,37 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1 &17627727
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 17627728}
+  m_Layer: 7
+  m_Name: BodyParent
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &17627728
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 17627727}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 526755631}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &102589990
 GameObject:
   m_ObjectHideFlags: 0
@@ -153,6 +184,37 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1321694357}
   m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &160437522
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 160437523}
+  m_Layer: 7
+  m_Name: CannonParent
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &160437523
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 160437522}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 526755631}
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &347248809
 GameObject:
@@ -255,6 +317,141 @@ MonoBehaviour:
   _rotationTarget: {fileID: 1321694357}
   _positionTarget: {fileID: 1321694357}
   _cameraTransform: {fileID: 347248810}
+--- !u!1 &526755624
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 526755631}
+  - component: {fileID: 526755630}
+  - component: {fileID: 526755629}
+  - component: {fileID: 526755628}
+  - component: {fileID: 526755627}
+  - component: {fileID: 526755626}
+  - component: {fileID: 526755625}
+  m_Layer: 7
+  m_Name: AI
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &526755625
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 526755624}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ce8cb5b6e39395c48b9a856fa201ce98, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _aiMovementInput: {fileID: 11400000, guid: 3822dd93123abd242ae13c40c80188fa, type: 2}
+  _aiRotationInput: {fileID: 11400000, guid: 432d6504d67da63488529a9e4a90d693, type: 2}
+  _playerMovementController: {fileID: 526755628}
+  _inventoryController: {fileID: 526755630}
+  _playerTowerRotationController: {fileID: 526755629}
+  TARGET: {fileID: 1659632874}
+--- !u!65 &526755626
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 526755624}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!54 &526755627
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 526755624}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
+--- !u!114 &526755628
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 526755624}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: be73598b757eaa746b71cd1250c05d27, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _rigidbody: {fileID: 526755627}
+  _inputData: {fileID: 11400000, guid: 6f54d1c038eb4ec489e2b74bb9dd9d40, type: 2}
+  _targetTransform: {fileID: 526755631}
+  _playerMovementSettings: {fileID: 11400000, guid: 61005b72bb9650c4fa7959a33939ad95, type: 2}
+--- !u!114 &526755629
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 526755624}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b896314a964d9dc4c83b349669f2eefa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _rotationInput: {fileID: 11400000, guid: 104b82d222970f646a5785ae4b701e08, type: 2}
+  _towerTransform: {fileID: 160437523}
+  _towerRotationSettings: {fileID: 11400000, guid: 3f064c064dfd2ec4395b4a28496d9376, type: 2}
+  _towerRotationController: {fileID: 0}
+--- !u!114 &526755630
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 526755624}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1e9b97040e36ad94ea23f2203a837738, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _inventoryItemDataArray:
+  - {fileID: 11400000, guid: 33c69752cb67ed14a8fff7a5308a41da, type: 2}
+  - {fileID: 11400000, guid: 14518ef1df4157a47bc7a3eccdb6d6ce, type: 2}
+  BodyParent: {fileID: 17627728}
+  CannonParent: {fileID: 160437523}
+--- !u!4 &526755631
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 526755624}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 3.49, y: 4.16, z: -2.95}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 160437523}
+  - {fileID: 17627728}
+  m_Father: {fileID: 0}
+  m_RootOrder: 8
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &675483469
 GameObject:
   m_ObjectHideFlags: 0
@@ -752,6 +949,7 @@ MonoBehaviour:
   _rotationInput: {fileID: 11400000, guid: 104b82d222970f646a5785ae4b701e08, type: 2}
   _towerTransform: {fileID: 897574183}
   _towerRotationSettings: {fileID: 11400000, guid: d0905f45c05a3964aae9a3895eb65b8e, type: 2}
+  _towerRotationController: {fileID: 0}
 --- !u!65 &1321694363
 BoxCollider:
   m_ObjectHideFlags: 0

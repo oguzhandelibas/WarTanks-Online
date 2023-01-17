@@ -41,6 +41,8 @@ namespace TopDownShooter.AI
             _aiMovementInput.ProcessInput();
             _aiRotationInput.ProcessInput();
             _towerRotationInput.ProcessInput();
+
+            //_inventoryController.ReactiveShootCommand.Execute();
         }
     }
 }

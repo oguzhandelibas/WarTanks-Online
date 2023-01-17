@@ -22,20 +22,17 @@ namespace TopDownShooter.AI
             {
                 Vertical = 0;
             }
+
             Vector3 dir = _currentTarget - _targetTransform.position;
             var rotation = Quaternion.LookRotation(dir, Vector3.up).eulerAngles;
             rotationDebug = rotation;
             rotationDebugLocal = _targetTransform.rotation.eulerAngles;
-            if (rotation.y > 360)
-            {
-                rotation.y = 360 - rotation.y;
-            }
-            var rotationGap = rotation.y - _targetTransform.rotation.eulerAngles.y;
+            var rotationGap = Mathf.Abs(rotation.y - _targetTransform.rotation.eulerAngles.y);
             rotationGapDebug = rotationGap;
             bool isGapNegative = rotationGap < 0;
-            if (Mathf.Abs(rotationGap) > 5)//0.25f 
+            if (Mathf.Abs(rotationGap) > 5f)
             {
-                float horizontalClamped = Mathf.Clamp(Mathf.Abs(rotationGap / 180), -1, 1);
+                float horizontalClamped = Mathf.Clamp(Mathf.Abs(rotationGap / 180) * (isGapNegative ? -1: 1) , -1, 1);
                 Horizontal = horizontalClamped;
             }
             else
